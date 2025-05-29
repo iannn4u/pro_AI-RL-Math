@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="flex flex-col items-center justify-center min-h-screen p-4 antialiased"
+  >
+    <div class="bg-white shadow-xl rounded-lg p-6 md:p-8 w-full max-w-lg">
+      <header class="mb-6 md:mb-8 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-700">
+          Kuis Matematika
+        </h1>
+        <p id="current-level-display" class="text-sm text-slate-500 mt-1">
+          Level: <span class="font-semibold">1 (Pertambahan Mudah)</span>
+        </p>
+      </header>
+
+      <main>
+        <section
+          id="question-area"
+          class="mb-6 p-4 bg-slate-50 rounded-md shadow-inner"
+        >
+          <p class="text-slate-600 mb-1 text-sm">Selesaikan soal berikut:</p>
+          <p
+            id="question-text"
+            class="text-2xl md:text-3xl font-medium text-slate-800 text-center"
+          >
+            12 + 5 = ?
+          </p>
+        </section>
+
+        <section id="answer-area" class="mb-6">
+          <label
+            for="answer-input"
+            class="block text-sm font-medium text-slate-700 mb-1"
+            >Jawaban Anda:</label
+          >
+          <input
+            type="number"
+            id="answer-input"
+            name="answer"
+            class="mt-1 block w-full px-4 py-3 bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 sm:text-lg"
+            placeholder="Ketik jawabanmu di sini..."
+          />
+        </section>
+
+        <section id="submission-area" class="mb-6">
+          <button
+            id="submit-button"
+            type="button"
+            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition duration-150 ease-in-out"
+          >
+            Kirim Jawaban
+          </button>
+        </section>
+
+        <section id="feedback-area" class="h-10 mb-4 text-center">
+          <p
+            id="feedback-text"
+            class="text-lg font-semibold text-slate-700"
+          ></p>
+        </section>
+      </main>
+
+      <footer class="text-center text-xs text-slate-400 mt-4">
+        <p>&copy; 2025 Kuis Hackathon AI</p>
+        <p id="score-display" class="mt-1">
+          Skor: <span class="font-semibold">0</span> | Benar:
+          <span class="font-semibold">0</span> | Salah:
+          <span class="font-semibold">0</span>
+        </p>
+      </footer>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
