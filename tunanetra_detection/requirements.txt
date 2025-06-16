@@ -1,5 +1,6 @@
-opencv-python
-mediapipe
-numpy
-scikit-learn
-joblib
+opencv-python==4.9.0.80
+numpy==1.26.4
+mediapipe==0.10.9
+tensorflow==2.15.0  # Untuk model CNN
+scikit-learn==1.4.0  # Untuk preprocessing
+matplotlib==3.8.0  # Untuk visualisasi
