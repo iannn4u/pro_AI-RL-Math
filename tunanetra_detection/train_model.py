@@ -4,7 +4,7 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.models import Sequential
 
 # Load dataset
-data = np.load("dataset_landmarks.npz")
+data = np.load("models/dataset_landmarks.npz")
 X_train, y_train = data["X_train"], data["y_train"]
 X_test, y_test = data["X_test"], data["y_test"]
 
@@ -17,7 +17,7 @@ model = Sequential([
     Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
     Dropout(0.5),
     Dense(64, activation='relu'),
-    Dense(3, activation='softmax')  # 3 kelas: A, B, C
+    Dense(26, activation='softmax')  # 4 kelas: A, B, C, D, E, F
 ])
 
 model.compile(optimizer='adam',
@@ -26,7 +26,7 @@ model.compile(optimizer='adam',
 
 # Training
 history = model.fit(X_train, y_train, epochs=50, validation_data=(X_test, y_test))
-model.save("sign_language_model.h5")
+model.save("models/sign_language_model.h5")
 
 # Di akhir train_model.py
 loss, accuracy = model.evaluate(X_test, y_test)
